@@ -12,28 +12,32 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
+# Inherit from device configuration
 $(call inherit-product, device/sony/taoshan/taoshan.mk)
 
+# Inherit some common Slim stuff.
+$(call inherit-product, vendor/slim/config/common_full_phone.mk)
 
-# Inherit CM common GSM stuff.
-$(call inherit-product, vendor/cm/config/gsm.mk)
+# Specify phone tech before including full_phone
+$(call inherit-product, vendor/slim/config/gsm.mk)
 
 # Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+$(call inherit-product, vendor/slim/config/nfc_enhanced.mk)
 
-# Inherit CM common Phone stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
-
+# Boot animation
 TARGET_SCREEN_HEIGHT := 854
 TARGET_SCREEN_WIDTH := 480
 
-# Build fingerprints
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=C2105_1275-0241 BUILD_FINGERPRINT=Sony/C2105_1275-0241/C2105:4.2.2/15.3.A.0.26/Android.0031:user/release-keys PRIVATE_BUILD_DESC="C2105-user 4.2.2 JDQ39 Android.0031 test-keys"
-
+# Device identifier
+PRODUCT_NAME := slim_taoshan
 PRODUCT_DEVICE := taoshan
-PRODUCT_NAME := cm_taoshan
 PRODUCT_BRAND := Sony
 PRODUCT_MODEL := Xperia L
 PRODUCT_MANUFACTURER := Sony
 PRODUCT_CHARACTERISTICS := phone
+
+# Release name
+PRODUCT_RELEASE_NAME := SlimTaoshan
+
+# Build fingerprints
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=C2105_1275-0241 BUILD_FINGERPRINT=Sony/C2105_1275-0241/C2105:4.2.2/15.3.A.0.26/Android.0031:user/release-keys PRIVATE_BUILD_DESC="C2105-user 4.2.2 JDQ39 Android.0031 test-keys"
