@@ -149,11 +149,11 @@ PRODUCT_PACKAGES += \
     setup_fs \
     e2fsck
 
-PRODUCT_PACKAGES += \
-    gps.msm8960 \
-    gps.conf \
-    sap.conf \
-    izat.conf
+#PRODUCT_PACKAGES += \
+#    gps.msm8960 \
+#    gps.conf \
+#    sap.conf \
+#    izat.conf
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.transmitpower=true \
