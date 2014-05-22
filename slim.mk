@@ -28,13 +28,9 @@ $(call inherit-product, vendor/slim/config/nfc_enhanced.mk)
 TARGET_SCREEN_HEIGHT := 854
 TARGET_SCREEN_WIDTH := 480
 
-# Device identifier
+# Overrides
 PRODUCT_NAME := slim_taoshan
 PRODUCT_DEVICE := taoshan
-PRODUCT_BRAND := Sony
-PRODUCT_MODEL := Xperia L
-PRODUCT_MANUFACTURER := Sony
-PRODUCT_CHARACTERISTICS := phone
 
 # Release name
 PRODUCT_RELEASE_NAME := XperiaL
