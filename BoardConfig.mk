@@ -96,6 +96,7 @@ BLUETOOTH_HCI_USE_MCT := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/taoshan/bluetooth
 
 TARGET_RECOVERY_FSTAB = device/sony/taoshan/rootdir/root/fstab.qcom
+TARGET_RECOVERY_INITRC := device/sony/taoshan/rootdir/root/init.rc
 BOARD_RECOVERY_SWIPE := false
 
 BOARD_HAS_NO_SELECT_BUTTON := true
@@ -129,6 +130,18 @@ TW_BOARD_CUSTOM_GRAPHICS := ../../../device/sony/taoshan/recovery/graphics/twrpg
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
 TW_NO_USB_STORAGE := true
+
+# MultiROM
+MR_PRODUCT_DEVICE := taoshan
+MR_DPI := hdpi
+MR_KEXEC_MEM_MIN := 0x85000000
+MR_KEXEC_MEM_MAX := 0x87ffffff
+MR_INIT_DEVICES := device/sony/taoshan/init_devices.c
+MR_SDCARD_BLOCK_DEV := mmcblk1
+MR_SDCARD_PART_PREFIX := mmcblk1p
+MR_USBDISK_BLOCK_DEV := sda
+MR_USBDISK_PART_PREFIX := sda
+
 
 BOARD_SEPOLICY_DIRS += \
     device/sony/taoshan/sepolicy
