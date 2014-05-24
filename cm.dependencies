@@ -1,15 +1,22 @@
 [
-  {
-    "repository": "android_device_sony_common",
-    "target_path": "device/sony/common"
-  },
-  {
-    "repository": "android_device_sony_qcom-common",
-    "target_path": "device/sony/qcom-common"
-  },
-  {
-    "repository": "android_kernel_sony_msm8930",
-    "target_path": "kernel/sony/msm8930"
-  }
-
+    {
+        "repository": "android_device_sony_common",
+        "target_path": "device/sony/common"
+    },
+    {
+        "repository": "android_device_sony_qcom-common",
+        "target_path": "device/sony/qcom-common"
+    },
+    {
+        "remote": "github",
+        "repository": "olivieer/kernel_sony_msm8930",
+        "target_path": "kernel/sony/msm8930",
+        "revision": "exp"
+    },
+    {
+        "remote": "github",
+        "repository": "TheMuppets/proprietary_vendor_sony",
+        "target_path": "vendor/sony",
+        "revision": "cm-11.0"
+    }
 ]
