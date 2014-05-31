@@ -12,18 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+ROM_BUILDTYPE := Olivier
 
 # Inherit AOSP device config
 $(call inherit-product, device/sony/taoshan/full_taoshan.mk)
 
 # Inherit CM common GSM stuff.
-$(call inherit-product, vendor/cm/config/gsm.mk)
+# Inherit Omni GSM telephony parts
+$(call inherit-product, vendor/omni/config/gsm.mk)
 
-# Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
-
-# Inherit CM common Phone stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit from our omni product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
 
 TARGET_SCREEN_HEIGHT := 854
 TARGET_SCREEN_WIDTH := 480
@@ -33,4 +32,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=C2105_1275-0241 BUILD_FINGERPRINT=S
 
 # Overrides for CM
 PRODUCT_DEVICE := taoshan
-PRODUCT_NAME := cm_taoshan
+PRODUCT_NAME := omni_taoshan
