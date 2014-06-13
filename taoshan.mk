@@ -14,13 +14,7 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, vendor/sony/taoshan/taoshan-vendor.mk)
-<<<<<<< HEAD
-$(call inherit-product, device/sony/qcom-common/qcom-common-adreno.mk)
-=======
-$(call inherit-product, device/sony/common/resources.mk)
 $(call inherit-product, device/sony/qcom-common/qcom-common.mk)
-
->>>>>>> 169ed76... Adreno driver cleanup
 $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 TARGET_PROVIDES_ADRENO_DRIVER := true
@@ -217,4 +211,3 @@ PRODUCT_PACKAGES += libtime_genoff
 # Product attributes
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_CHARACTERISTICS := phone
-
