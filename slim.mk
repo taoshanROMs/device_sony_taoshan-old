@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Inherit from device configuration
-$(call inherit-product, device/sony/taoshan/taoshan.mk)
+$(call inherit-product, device/sony/taoshan/full_taoshan.mk)
 
 # Inherit some common Slim stuff.
 $(call inherit-product, vendor/slim/config/common_full_phone.mk)
