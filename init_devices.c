@@ -16,10 +16,12 @@ const char *mr_init_devices[] = {
 	"/sys/class/misc/uinput",
 	"/sys/class/input/input0",
 	"/sys/class/input/input1",
+	"/sys/class/input/input11",
 	"/sys/class/input/input2",
 	"/sys/class/input/event0",
 	"/sys/class/input/event1",
 	"/sys/class/input/event2",
+	"/sys/class/input/event11",
 
 	// adb
 	"/sys/class/tty/ptmx",
