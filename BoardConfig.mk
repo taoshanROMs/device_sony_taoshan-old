@@ -142,29 +142,3 @@ MR_SDCARD_BLOCK_DEV := mmcblk1
 MR_SDCARD_PART_PREFIX := mmcblk1p
 MR_USBDISK_BLOCK_DEV := sda
 MR_USBDISK_PART_PREFIX := sda
-
-
-BOARD_SEPOLICY_DIRS += \
-    device/sony/taoshan/sepolicy
-
-BOARD_SEPOLICY_UNION += \
-    file_contexts \
-    app.te \
-    bluetooth.te \
-    device.te \
-    domain.te \
-    drmserver.te \
-    file.te \
-    hci_init.te \
-    healthd.te \
-    init.te \
-    init_shell.te \
-    keystore.te \
-    kickstart.te \
-    mediaserver.te \
-    netd.te \
-    rild.te \
-    surfaceflinger.te \
-    system.te \
-    ueventd.te \
-    wpa_supplicant.te
