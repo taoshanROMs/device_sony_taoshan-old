@@ -134,9 +134,10 @@ TW_NO_USB_STORAGE := true
 # MultiROM
 MR_PRODUCT_DEVICE := taoshan
 MR_DPI := hdpi
+MR_INIT_DEVICES := device/sony/taoshan/init_devices.c
 MR_KEXEC_MEM_MIN := 0x85000000
 MR_KEXEC_MEM_MAX := 0x87ffffff
-MR_INIT_DEVICES := device/sony/taoshan/init_devices.c
+MR_FSTAB := device/sony/taoshan/rootdir/root/twrp.fstab
 MR_SDCARD_BLOCK_DEV := mmcblk1
 MR_SDCARD_PART_PREFIX := mmcblk1p
 MR_USBDISK_BLOCK_DEV := sda
